@@ -9,14 +9,11 @@ class User < ApplicationRecord
 
   def self.find_by_credentials(user_name, password)
     user = User.find_by(user_name: user_name)
-    debugger
-    if user.is_password?(password)
-      debugger
+    if user && user.is_password?(password)
       user
     else
       nil
     end
-
   end
 
   def reset_session_token!
