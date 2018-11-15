@@ -19,7 +19,9 @@
   <% if flash.now[:errors] %>
     <% flash.now[:errors].each do |error|  %>
       <%= error %>
+      <br>
     <% end %>
   <% end %>
+  <br>
   <input type="submit" value="Log In">
 </form>
